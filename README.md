@@ -2,9 +2,15 @@
 
 宝可梦风格的网页小游戏：纯 HTML / CSS / JavaScript，无任何依赖，无需构建。
 
+## 在线试玩
+
+👉 **https://yoyocadence.github.io/Pokeyo/**
+
+（通过 GitHub Pages 部署，推送到 `main` 分支后自动更新。）
+
 ## 怎么玩
 
-直接用浏览器打开 `index.html` 即可（双击就行）。
+在线打开上面的网址，或把仓库 clone 到本地后双击 `index.html` 即可。
 
 - **方向键 / WASD** 在地图上移动
 - 走进 **深草丛** 有概率遭遇野生宝可梦
