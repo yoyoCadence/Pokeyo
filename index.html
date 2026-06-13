@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pokeyo - 宝可梦风格冒险</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <div id="game-area">
+    <canvas id="world" width="640" height="448"></canvas>
+
+    <div id="battle" class="hidden">
+      <div id="battle-scene">
+        <div id="enemy-info" class="info-panel">
+          <div class="info-row"><span id="enemy-name"></span><span id="enemy-level"></span></div>
+          <div class="hp-bar"><div id="enemy-hp" class="hp-fill"></div></div>
+        </div>
+        <div id="enemy-sprite" class="sprite"></div>
+        <div id="player-sprite" class="sprite"></div>
+        <div id="player-info" class="info-panel">
+          <div class="info-row"><span id="player-name"></span><span id="player-level"></span></div>
+          <div class="hp-bar"><div id="player-hp" class="hp-fill"></div></div>
+          <div id="player-hp-text"></div>
+          <div class="exp-bar"><div id="player-exp" class="exp-fill"></div></div>
+        </div>
+      </div>
+      <div id="battle-bottom">
+        <div id="battle-msg"></div>
+        <div id="menu-main" class="menu hidden">
+          <button data-act="fight">战斗</button>
+          <button data-act="bag">背包</button>
+          <button data-act="party">宝可梦</button>
+          <button data-act="run">逃跑</button>
+        </div>
+        <div id="menu-moves" class="menu hidden"></div>
+        <div id="menu-bag" class="menu hidden"></div>
+        <div id="menu-party" class="menu hidden"></div>
+      </div>
+    </div>
+
+    <div id="title-screen" class="overlay">
+      <h1>Pokeyo</h1>
+      <p class="subtitle">宝可梦风格的冒险小游戏</p>
+      <button id="btn-new">开始新冒险</button>
+      <button id="btn-continue" class="hidden">继续冒险</button>
+      <p class="hint">方向键 / WASD 移动 · 走进深草丛遭遇野生宝可梦</p>
+    </div>
+
+    <div id="starter-screen" class="overlay hidden">
+      <h2>选择你的初始伙伴</h2>
+      <div id="starter-cards"></div>
+    </div>
+  </div>
+
+  <div id="sidebar">
+    <h3>队伍</h3>
+    <div id="party-list"></div>
+    <h3>背包</h3>
+    <div id="bag-list"></div>
+    <p class="hint">提示：走到 ✚ 治疗台可恢复全队并存档；地图上的 ◓ 可以捡精灵球。点击队伍成员可将其调到队首。</p>
+  </div>
+</div>
+<div id="toast" class="hidden"></div>
+
+<script src="js/data.js"></script>
+<script src="js/monster.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/overworld.js"></script>
+<script src="js/battle.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
